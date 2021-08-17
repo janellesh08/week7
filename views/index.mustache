@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Trips</h1>
+     <form method="POST" action="/trips">
+         <input name="title" placeholder="Destination" type="text">
+         <input type="text" name="imageURL" placeholder="Image URL">
+         <input type="date" name="depDate" placeholder="Departure Date">
+         <input type="date" name="retDate" placeholder="Return Date">
+         <button id="submitBtn">Add</button>
+     </form>
+
+     <ul id="tripsList">
+        {{#allTrips}} 
+
+        <li>
+            {{title}} - <img src = "{{imageURL}}" id = "image"/> - {{depDate}} - {{retDate}}
+        </li>
+
+        {{/allTrips}} 
+    </ul>
+     
+
+</body>
+</html>
